@@ -83,7 +83,7 @@ def generate_synthetic_data():
     
     # Project parameters that affect cost and time
     data = pd.DataFrame({
-        'Project_Start_Date': pd.date_range(start='2020-01-01', periods=n_samples, freq='ME'),  # Changed M to ME
+        'Project_Start_Date': pd.date_range(start='2020-01-01', periods=n_samples, freq='M'),
         'Line_Length_KM': np.random.uniform(10, 100, n_samples).astype('float64'),
         'Voltage_Level_KV': np.random.choice([33, 66, 110, 220, 400], n_samples).astype('int64'),
         'Terrain_Difficulty': np.random.choice(['Low', 'Medium', 'High'], n_samples),  # Keep as object type
